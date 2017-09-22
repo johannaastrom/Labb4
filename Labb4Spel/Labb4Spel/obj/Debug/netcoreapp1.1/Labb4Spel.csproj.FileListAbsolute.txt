@@ -1,0 +1,10 @@
+C:\Users\Andreas\source\repos\Labb4Spel\Labb4Spel\bin\Debug\netcoreapp1.1\Labb4Spel.deps.json
+C:\Users\Andreas\source\repos\Labb4Spel\Labb4Spel\bin\Debug\netcoreapp1.1\Labb4Spel.runtimeconfig.json
+C:\Users\Andreas\source\repos\Labb4Spel\Labb4Spel\bin\Debug\netcoreapp1.1\Labb4Spel.runtimeconfig.dev.json
+C:\Users\Andreas\source\repos\Labb4Spel\Labb4Spel\bin\Debug\netcoreapp1.1\Labb4Spel.dll
+C:\Users\Andreas\source\repos\Labb4Spel\Labb4Spel\bin\Debug\netcoreapp1.1\Labb4Spel.pdb
+C:\Users\Andreas\source\repos\Labb4Spel\Labb4Spel\obj\Debug\netcoreapp1.1\Labb4Spel.csprojResolveAssemblyReference.cache
+C:\Users\Andreas\source\repos\Labb4Spel\Labb4Spel\obj\Debug\netcoreapp1.1\Labb4Spel.csproj.CoreCompileInputs.cache
+C:\Users\Andreas\source\repos\Labb4Spel\Labb4Spel\obj\Debug\netcoreapp1.1\Labb4Spel.AssemblyInfo.cs
+C:\Users\Andreas\source\repos\Labb4Spel\Labb4Spel\obj\Debug\netcoreapp1.1\Labb4Spel.dll
+C:\Users\Andreas\source\repos\Labb4Spel\Labb4Spel\obj\Debug\netcoreapp1.1\Labb4Spel.pdb

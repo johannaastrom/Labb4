@@ -7,7 +7,7 @@ namespace Labb4Spel
     public class Wall : Blocks
     {
 
-        public override string buildingBlocks()
+        public override string printBlock()
         {
             return "#";
         }

@@ -6,6 +6,6 @@ namespace Labb4Spel
 {
     public abstract class Blocks
     {
-        public abstract void buildingBlocks();
+        public abstract string printBlock();
     }
 }

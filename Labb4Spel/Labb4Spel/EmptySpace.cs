@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-//namespace labb4spel
-//{
-//    public class emptyspace : blocks
-//    {
-//        public override string buildingblocks()
-//        {
-//            return;
-//        }
-//    }
-//}
+namespace Labb4Spel
+{
+    public class EmptySpace : Blocks
+    {
+        public override string printBlock()
+        {
+            return ".";
+        }
+    }
+}

@@ -6,7 +6,7 @@ namespace Labb4Spel
 {
     public class Character : Blocks
     {
-        public override string buildingBlocks()
+        public override string printBlock()
         {
             return "@";
         }

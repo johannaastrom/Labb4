@@ -20,12 +20,7 @@ namespace Labb4Spel
 
 
             Console.ReadKey();
-            // @ [10.10]
-            //när man trycker på w ska x++ så att det blir [11.10], if sats, console.readkey(w)
-            // if (position = console.readkey(w)
-            // {
-            // r++
-            // }
+            
 
         }
     }

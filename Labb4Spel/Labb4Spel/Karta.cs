@@ -6,11 +6,9 @@ namespace Labb4Spel
 {
     public class Karta
     {
-        
 
         public void Map()
         {
-           
 
             #region Gammal kod
             ////Wall vägg = new Wall();
@@ -84,15 +82,16 @@ namespace Labb4Spel
             Blocks[,] map = new Blocks[COLUMNS, ROWS];
 
             Character gubbe = new Character(3, 11);
-            Wall square = new Wall();
-            
+            gubbe.playerColumn = 3;
+            gubbe.playerRow = 11;
+
             // Skapa karta
             for (int row = 0; row < ROWS; row++)
             {
                 for (int column = 0; column < COLUMNS; column++)
                 {
 
-                    if (row == 0 || row == ROWS - 1 || column == 0 || column == COLUMNS - 1)
+                    if (row == 0 || row == ROWS - 1 || column == 0 || column == COLUMNS - 1 || row == 8)
                         map[column, row] = new Wall();
 
                     else
@@ -124,16 +123,15 @@ namespace Labb4Spel
                 Console.Write(buffer);
 
                 var key = Console.ReadKey();
-                if (key.Key == ConsoleKey.W && .isPassable)
-                {
+                if (key.Key == ConsoleKey.W && map[gubbe.playerColumn, gubbe.playerRow - 1].isPassable())
                     gubbe.playerRow--;
-                }
-                else if (key.Key == ConsoleKey.A)
+                else if (key.Key == ConsoleKey.A && map[gubbe.playerColumn - 1, gubbe.playerRow].isPassable())
                     gubbe.playerColumn--;
-                else if (key.Key == ConsoleKey.S)
+                else if (key.Key == ConsoleKey.S && map[gubbe.playerColumn, gubbe.playerRow + 1].isPassable())
                     gubbe.playerRow++;
-                else if (key.Key == ConsoleKey.D)
+                else if (key.Key == ConsoleKey.D && map[gubbe.playerColumn + 1, gubbe.playerRow].isPassable())
                     gubbe.playerColumn++;
+
             }//while
         }//Map
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Labb4Spel
 {
-    public class EmptySpace : Blocks 
+    class KeyRoom : Blocks
     {
         public override bool isPassable()
         {
@@ -13,7 +13,7 @@ namespace Labb4Spel
 
         public override string printBlock()
         {
-            return ".";
+            return "X";
         }
     }
 }

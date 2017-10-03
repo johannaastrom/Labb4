@@ -4,8 +4,10 @@ using System.Text;
 
 namespace Labb4Spel
 {
-    public class EmptySpace : Blocks 
+    public class Key : Blocks
     {
+        public bool hasKey { get; set; }
+
         public override bool isPassable()
         {
             return true;
@@ -13,7 +15,8 @@ namespace Labb4Spel
 
         public override string printBlock()
         {
-            return ".";
+            return "K";
         }
+
     }
 }

@@ -6,15 +6,14 @@ namespace Labb4Spel
 {
     public class Wall : Blocks
     {
-        public override bool 
+
+        public override string printBlock()
         {
-
+            return "#";
         }
-
-    public override string printBlock()
-
-    {
-        return "#";
+        public override bool isPassable()
+        {
+            return false;
+        }
     }
-}
 }

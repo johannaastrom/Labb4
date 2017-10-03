@@ -16,8 +16,8 @@ namespace Labb4Spel
         }
         public Character(int playerRow, int playerColumn)
         {
-            playerRow = 0;
-            playerColumn = 0;
+            playerRow = 3;
+            playerColumn = 11;
         }
     }
 

@@ -3,3 +3,5 @@ Labb4Spel/.vs/
 bin/*
 obj/
 *.suo
+/Labb4Spel/Labb4Spel/bin/Debug/netcoreapp1.1
+storage.ide

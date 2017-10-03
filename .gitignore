@@ -1,0 +1,5 @@
+.vs/
+Labb4Spel/.vs/
+bin/*
+obj/
+*.suo

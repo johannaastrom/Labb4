@@ -19,6 +19,7 @@ namespace Labb4Spel
             karta.Map();
 
 
+
             Console.ReadKey();
             
 

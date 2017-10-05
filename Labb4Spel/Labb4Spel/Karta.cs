@@ -133,7 +133,7 @@ Press any key to enter...");
                         map[column, row] = new Exit();
                         exit = (Exit)map[column, row];
                     }
-                    else if (row == 3 && column == 20)
+                    else if (row == 3 && column == 20 || row == 9 && column == 3 || row == 9 && column == 5 )
                     {
                         map[column, row] = new Monster1();
                         monster = (Monster1)map[column, row];
@@ -143,8 +143,8 @@ Press any key to enter...");
 
                 }
             }
-
-            while (true)  // TODO: lägg till ett mål som avbryter loopen
+            bool endGame = true;
+            while (endGame)  // TODO: lägg till ett mål som avbryter loopen
             {
                 // Rita ut kartan
                 string buffer = "";
@@ -188,7 +188,8 @@ Press any key to enter...");
                     }
 
                 }
-                //if (newPosition.RoomType == Blocks.ByggBlock.monster)
+                if (newPosition.RoomType == Blocks.ByggBlock.exit)
+                    endGame = false;
 
 
 
@@ -218,8 +219,9 @@ Press any key to enter...");
                 Console.WriteLine($"You have taken {Counter} steps!");
             }//while
 
-
-
+            Console.Clear();
+            Console.WriteLine($"Grattis du klarade det! Du fick {Counter} poäng");
+            
         }//Map
 
 

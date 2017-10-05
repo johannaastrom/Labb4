@@ -4,18 +4,21 @@ using System.Text;
 
 namespace Labb4Spel
 {
-    public class EmptySpace : Blocks 
+    public class Monster1 : Blocks
     {
-        public override ByggBlock RoomType { get; set; } = ByggBlock.emptyspace;
+        public int Monster { get; set; }
+        public override ByggBlock RoomType { get; set; } = ByggBlock.monster;
+
 
         public override bool isPassable()
         {
-            return true;
+                return true;
         }
 
         public override char printBlock()
         {
-            return (char)ByggBlock.emptyspace;
+            return (char)ByggBlock.monster;
         }
+
     }
 }

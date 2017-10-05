@@ -7,15 +7,16 @@ namespace Labb4Spel
     public class Key : Blocks
     {
         public bool hasKey { get; set; }
+        public override ByggBlock RoomType { get; set; } = ByggBlock.keyroom;
 
         public override bool isPassable()
         {
             return true;
         }
 
-        public override string printBlock()
+        public override char printBlock()
         {
-            return "K";
+            return (char)ByggBlock.keyroom;
         }
 
     }

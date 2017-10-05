@@ -6,10 +6,22 @@ namespace Labb4Spel
 {
     public abstract class Blocks
     {
-        public abstract string printBlock();
+        public abstract char printBlock();
 
         public abstract bool isPassable();
 
-    }
+        public enum ByggBlock
+        {
+            keyroom = 'K',
+            emptyroom = 'O',
+            wall = '#',
+            emptyspace = '.',
+            door = 'D',
+            monster = 'M',
+                exit = 'E'
+        }
 
+
+        public abstract ByggBlock RoomType { get; set; }
+    }
 }

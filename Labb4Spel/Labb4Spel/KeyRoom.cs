@@ -6,14 +6,26 @@ namespace Labb4Spel
 {
     class KeyRoom : Blocks
     {
+        public override ByggBlock RoomType { get; set; } = ByggBlock.keyroom;
+
+        public bool hasTheKey { get; set; }
+
         public override bool isPassable()
         {
             return true;
         }
 
-        public override string printBlock()
+        public override char printBlock()
         {
-            return "X";
+            if (hasTheKey)
+                return (char)ByggBlock.keyroom;
+            else
+                return (char)ByggBlock.emptyroom;
         }
+        public KeyRoom()
+        {
+            hasTheKey = true;
+            RoomType = ByggBlock.keyroom;
+        }        
     }
 }

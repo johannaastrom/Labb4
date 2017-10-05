@@ -6,14 +6,16 @@ namespace Labb4Spel
 {
     public class Wall : Blocks
     {
+        public override ByggBlock RoomType { get; set; } = ByggBlock.wall;
 
-        public override string printBlock()
+        public override char printBlock()
         {
-            return "#";
+            return (char)ByggBlock.wall;
         }
         public override bool isPassable()
         {
             return false;
         }
+
     }
 }

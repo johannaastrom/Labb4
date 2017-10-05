@@ -4,16 +4,18 @@ using System.Text;
 
 namespace Labb4Spel
 {
-    class EnterRoom : Blocks
+    class EmptyRoom : Blocks
     {
+        public override ByggBlock RoomType { get; set; } = ByggBlock.emptyroom;
+
         public override bool isPassable()
         {
             return true;
         }
 
-        public override string printBlock()
+        public override char printBlock()
         {
-            return "O";
+            return (char)ByggBlock.emptyroom;
         }
     }
 }

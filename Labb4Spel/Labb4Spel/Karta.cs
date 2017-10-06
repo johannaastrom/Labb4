@@ -4,10 +4,7 @@ using System.Text;
 
 namespace Labb4Spel
 
-//De som spelat:      Poäng:
-//1.
-//2.
-//3.    
+   
 {
     public class Karta : IColor
     {
@@ -21,7 +18,13 @@ namespace Labb4Spel
             Color();
             Console.WriteLine(@"Welcome to the craziest game on earth!
 
-Press any key to enter...");
+Press any key to enter...
+
+
+
+
+");
+            Console.WriteLine("Try to get as few points as possible");
             Console.ReadKey();
             Console.Clear();
 
@@ -107,7 +110,7 @@ Press any key to enter...");
             gubbe.playerColumn = 3;
             gubbe.playerRow = 11;
 
-            // Skapa karta
+            // Skapar kartan
             for (int row = 0; row < ROWS; row++)
             {
                 for (int column = 0; column < COLUMNS; column++)
@@ -117,7 +120,7 @@ Press any key to enter...");
                         column == 3 && row == 8 || column == 5 && row == 8 || column == 6 && row == 8 || column == 7 && row == 8 || column == 8 && row == 8
                         || column == 9 && row == 8 || column == 10 && row == 8 || column == 11 && row == 8 || column == 12 && row == 8 || column == 13 && row == 8
                         || column == 14 && row == 8 || column == 15 && row == 8 || column == 16 && row == 8 || column == 17 && row == 8 || column == 18 && row == 8
-                        || column == 19 && row == 8 || column == 20 && row == 8 || column == 21 && row == 8 || column == 22 && row == 8)
+                        || column == 19 && row == 8 || column == 20 && row == 8 || column == 21 && row == 8 || column == 22 && row == 8 || column == 17 && row == 10 || column == 17 && row == 11 || column == 17 && row == 12 || column == 17 && row == 13 || column == 17 && row == 14 || column == 17 && row == 15)
                         map[column, row] = new Wall();
 
                     else if (row == 10 && column == 20)
@@ -144,7 +147,7 @@ Press any key to enter...");
                 }
             }
             bool endGame = true;
-            while (endGame)  // TODO: lägg till ett mål som avbryter loopen
+            while (endGame)  // 
             {
                 // Rita ut kartan
                 string buffer = "";
@@ -159,21 +162,21 @@ Press any key to enter...");
                         else
                             line += map[column, row].printBlock();
                     }
-                    //Console.WriteLine(line);
+                    
                     buffer += line + "\n";
 
                 }
+                
                 Console.CursorLeft = 0;
                 Console.CursorTop = 0;
                 Console.Write(buffer);
 
-                // ta reda på om rummet är ett keyroom (enum)
-                // gör typecast på map[..]
-                // if hasthekey
+                //Kollar vart spelaren är och interagerar med blocken
                 Blocks newPosition = map[gubbe.playerColumn, gubbe.playerRow];
                 if (newPosition.RoomType == Blocks.ByggBlock.monster)
                 {
                     Counter += 10;
+                    
                 }
                 if (newPosition.RoomType == Blocks.ByggBlock.keyroom)
                 {
@@ -192,7 +195,7 @@ Press any key to enter...");
                     endGame = false;
 
 
-
+                //Kontroll
                 var key = Console.ReadKey();
                 if (key.Key == ConsoleKey.W && map[gubbe.playerColumn, gubbe.playerRow - 1].isPassable())
                 {
@@ -214,14 +217,22 @@ Press any key to enter...");
                     gubbe.playerColumn++;
                     Counter++;
                 }
-
+                
                 Console.WriteLine("");
                 Console.WriteLine($"You have taken {Counter} steps!");
+                Console.WriteLine(@"@ = you
+# = wall
+K = room with key
+O = empty room
+M = monster
+E = Exit");
+                
             }//while
 
             Console.Clear();
-            Console.WriteLine($"Grattis du klarade det! Du fick {Counter} poäng");
-            
+            Console.WriteLine($"Congratualions you did it! You got {Counter} points");
+            if(Counter > 65)
+                Console.WriteLine("..Noob");     
         }//Map
 
 

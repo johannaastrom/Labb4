@@ -15,7 +15,7 @@ namespace Labb4Spel
             keyroom = 'K',
             emptyroom = 'O',
             wall = '#',
-            emptyspace = '.',
+            emptyspace = ' ',
             door = 'D',
             monster = 'M',
                 exit = 'E'

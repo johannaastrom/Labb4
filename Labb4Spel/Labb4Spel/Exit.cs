@@ -11,10 +11,7 @@ namespace Labb4Spel
 
         public override bool isPassable()
         {
-            //if (ExitDoor == true)
                 return true;
-           /* else
-                return false;*/
         }
 
         public override char printBlock()
